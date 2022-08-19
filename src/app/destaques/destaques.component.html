@@ -1,0 +1,40 @@
+<header class={{destaque}}>
+    <div class="fundo">
+        <nav>
+            <ul>
+                <li [class.active]="destaque == 'dstq-1'" (click)="changeDestaque('dstq-1')"></li>
+
+                <li [class.active]="destaque == 'dstq-2'" (click)="changeDestaque('dstq-2')"></li>
+
+                <li [class.active]="destaque == 'dstq-3'" (click)="changeDestaque('dstq-3')"></li>
+            </ul>
+        </nav>
+
+        <div [ngSwitch]="destaque">
+            <div *ngSwitchDefault>
+                <app-destaque-dados>
+                    <div class="titulo">BLADE RUNNER 2049</div>
+                    <div class="ano">2017</div>
+                    <div class="duracao">2h 43m</div>
+                    <div class="extrelas">XXXXX</div>
+                </app-destaque-dados>
+            </div>
+            <div *ngSwitchCase="'dstq-2'">
+                <app-destaque-dados>
+                    <div class="titulo">BATMAN</div>
+                    <div class="ano">2022</div>
+                    <div class="duracao">2h 56m</div>
+                    <div class="extrelas"></div>
+                </app-destaque-dados>
+            </div>
+            <div *ngSwitchCase="'dstq-3'">
+                <app-destaque-dados>
+                    <div class="titulo">TUDO EM TODO O LUGAR AO MESMO TEMPO</div>
+                    <div class="ano">2022</div>
+                    <div class="duracao">2h 19m</div>
+                    <div class="extrelas"></div>
+                </app-destaque-dados>
+            </div>
+        </div>
+    </div>
+</header>

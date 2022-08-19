@@ -1,0 +1,26 @@
+img {
+   width: 400px;
+   height: 300px;
+
+   transition-property: width height;
+   transition-duration: 1s;
+}
+
+img:hover{
+   width: 430px;
+   cursor: pointer;
+}
+
+.info {
+   display: flex;
+   justify-content: center;
+}
+
+h1 {
+   color: white;
+}
+
+h2 {
+   color: gray;
+   margin-left: 15px;
+}

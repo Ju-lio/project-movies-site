@@ -1,0 +1,58 @@
+header, header ul, .header-bar, .header-settings {
+   display: flex;
+   align-items: center;
+}
+
+header {
+   position: absolute;
+   top: 0;
+   width: 100%;
+   font-size: 14pt;
+   color: #999999;
+   fill: #999999;
+}
+
+header ul li {
+   display: flex;
+   align-items: center;
+   list-style: none;
+   margin: 30px 10px;
+   padding: 10px 15px;
+   background-color: #00000050;
+   border-radius: 20px;
+   cursor: pointer;
+
+   transition-property: color fill;
+   transition-duration: 200ms;
+}
+
+header ul li:hover {
+   color: #D8D8D8;
+   fill: #D8D8D8;
+   background-color: #1D1D1D;
+}
+
+header ul li svg {
+   width: 25px;
+   height: 25px;
+   margin-right: 15px;
+}
+
+.header-title {
+   margin: 0 140px 0px 80px;
+   font-size: 22pt;
+   padding: 5px 15px;
+   color: white;
+}
+
+.header-settings {
+   width: 100%;
+   height: 100%;
+   justify-content: flex-end;
+}
+
+.header-settings div{
+   margin: 25px;
+   padding: 5px 15px;
+}
+
