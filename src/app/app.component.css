@@ -1,6 +1,6 @@
 .mais-acess {
    width: 90vw;
-   margin: 50px 100px;
+   margin: 50px 5vw;
 }
 
 h1 {
@@ -11,8 +11,6 @@ h1 {
 
 .filmes {
    display: flex;
-}
-
-img {
-   height: 200px;
+   overflow-y: scroll;
+   padding-bottom: 5px;
 }

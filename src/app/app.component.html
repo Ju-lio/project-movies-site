@@ -2,14 +2,19 @@
 
 <component-header></component-header>
 
+
+
 <div class="mais-acess">
    <h1>FILMES MAIS ACESSADOS</h1>
+   {{carregaFilmes()}}
    <div class="filmes">
-      <app-filme>
-         <div class="imagem"><img src="../assets/mais-acess-01.png" alt=""></div>
-         <div class="titulo">CLUBE DA LUTA</div>
-         <div class="ano">1999</div>
-         <div class="duracao">2h 19m</div>
+      <app-filme
+      *ngFor="let f of filmes;index as i"
+      [maisAcessTitulo]="filmes[i].titulo"
+      [maisAcessSrc]="filmes[i].src"
+      [maisAcessAno]="filmes[i].ano"
+      [maisAcessDuracao]="filmes[i].duracao"
+      >
       </app-filme>
    </div>
 </div>

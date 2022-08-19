@@ -1,8 +1,12 @@
 <header>
-   <div><ng-content select=".imagem"></ng-content></div>
-   <div class="info">
-      <h1><ng-content select=".titulo"></ng-content> </h1>
-      <h2><ng-content select=".ano"></ng-content></h2>
-      <h2><ng-content select=".duracao"></ng-content></h2>
+   <div class="image" #image [style.background-image]="'url('+ maisAcessSrc +')'">
+      <div class="info">
+         <footer>
+            <h2>{{maisAcessAno}}</h2>
+            <h2>-</h2>
+            <h2>{{maisAcessDuracao}}</h2>
+         </footer>
+         <h1>{{maisAcessTitulo}}</h1>
+      </div>
    </div>
 </header>
