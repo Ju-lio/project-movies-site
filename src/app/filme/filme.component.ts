@@ -7,10 +7,10 @@ import { Component, Input, OnInit,  } from '@angular/core';
 })
 export class FilmeComponent implements OnInit {
 
-  @Input() maisAcessTitulo : string =''           
-  @Input() maisAcessSrc    : string =''            
-  @Input() maisAcessAno    : string =''        
-  @Input() maisAcessDuracao: string =''   
+  @Input() filmeTitulo : string =''           
+  @Input() filmeSrc    : string =''            
+  @Input() filmeAno    : string =''        
+  @Input() filmeDuracao: string =''   
   
   constructor() { }
 

@@ -1,0 +1,29 @@
+ngOnInit(): void {
+   this.favoritarInit()
+ }
+
+ favoritar() {
+   this.dstqFav = !this.dstqFav
+
+   if(this.dstq == 'dstq-1') {
+     console.log('APP: ' + this.appComponent.dstq1FavApp + ' RECEBE THIS: ' + this.dstqFav)
+     this.appComponent.dstq1FavApp = this.dstqFav
+     console.log(this.appComponent.dstq1FavApp)
+   } else if(this.dstq == 'dstq-2') {
+     // this.destaquesComponent.dstq2FavApp = this.dstqFav
+   } else if(this.dstq == 'dstq-3') {
+     // this.destaquesComponent.dstq3FavApp = this.dstqFav
+   }
+ }
+
+ favoritarInit()  {
+   // if(this.dstq == 'dstq-1') {
+   //   this.dstqFav = this.appComponent.dstq1FavApp
+   // } else if(this.dstq == 'dstq-2') {
+   //   // this.dstqFav = this.destaquesComponent.dstq2FavApp
+   // } else if(this.dstq == 'dstq-3') {
+   //   // this.dstqFav = this.destaquesComponent.dstq3FavApp
+   // }
+   // console.log(this.dstqFav + ' - D INIT')
+   // console.log(this.appComponent.dstq1FavApp + ' - D INIT APP CIMA')
+ }

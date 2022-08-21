@@ -1,0 +1,17 @@
+<div class="container">
+	<h1>{{containerTitle}}</h1>
+	<div class="midias">
+		<div id="prior" (click)="priorClick()"></div>
+		<div id="container" #aba>
+			<app-filme
+			*ngFor="let m of midias;index as i"
+			[filmeTitulo]="midias[i].titulo | uppercase"
+			[filmeSrc]="midias[i].src"
+			[filmeAno]="midias[i].ano"
+			[filmeDuracao]="midias[i].duracao | lowercase"
+			>
+			</app-filme>
+		</div>
+		<div id="next" (click)="nextClick()"></div>
+	</div>
+ </div>

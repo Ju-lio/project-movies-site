@@ -12,7 +12,7 @@ header {
    fill: #999999;
 }
 
-header ul li {
+.button {
    display: flex;
    align-items: center;
    list-style: none;
@@ -26,16 +26,35 @@ header ul li {
    transition-duration: 200ms;
 }
 
-header ul li:hover {
+.button h1 {
+   margin-left: 15px;
+}
+
+.button:hover {
    color: #D8D8D8;
    fill: #D8D8D8;
    background-color: #1D1D1D;
 }
 
-header ul li svg {
+.button-selected {
+   color: #D8D8D8;
+   fill: #D8D8D8;
+   background-color: #1D1D1D;
+}
+
+.button .show-text{
+   font-size: 0;
+   transition: all 200ms ease;
+}
+
+.button:hover .show-text{
+   display: flex;
+   font-size: 12pt;
+}
+
+.icon {
    width: 25px;
    height: 25px;
-   margin-right: 15px;
 }
 
 .header-title {
@@ -51,8 +70,23 @@ header ul li svg {
    justify-content: flex-end;
 }
 
-.header-settings div{
-   margin: 25px;
-   padding: 5px 15px;
+.header-settings{
+   margin-right: 50px;
 }
 
+#search-bar {
+   outline-style: none;
+   width: 300px;
+   margin-left: 20px;
+   color: white;
+   background-color: #1D1D1D;
+
+   transition-property: width;
+   transition-duration: 1s;
+}
+
+.imgPerfil {
+   width: 30px;
+   height: 30px;
+   border-radius: 50%;
+}

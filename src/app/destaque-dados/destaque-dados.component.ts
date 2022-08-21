@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { AppComponent } from '../app.component'
 
 @Component({
   selector: 'app-destaque-dados',
@@ -7,9 +8,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DestaqueDadosComponent implements OnInit {
 
-  constructor() { }
+  @Input() titulo: string = ''
+  @Input() ano: string = ''
+  @Input() duracao: string = ''
+  @Input() extrelas: string = ''
+  @Input() sinopse: string = ''
+  @Input() dstq: string = ''
+
+  dstqFav: boolean = false
+  appComponent: AppComponent;
+
+  constructor() { 
+    
+    this.appComponent = new AppComponent();
+  }
 
   ngOnInit(): void {
   }
 
-}
+   }
