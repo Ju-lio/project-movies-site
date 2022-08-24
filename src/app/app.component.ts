@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Perfil } from './models/models.model';
 
 @Component({
   selector: 'app-root',
@@ -10,32 +11,29 @@ export class AppComponent implements OnInit {
 
   login: boolean = true;
 
-  perfis = [] as {
-    usuario: string;
-    src: string;
-  }[];
+  perfis?: Perfil[];
 
   ngOnInit(): void {
     this.loadPerfis();
   }
 
   loadPerfis() {
-    this.perfis.push({
+    this.perfis?.push({
       usuario: 'Perfil 1',
       src: '../assets/perfil-01.png',
     });
 
-    this.perfis.push({
+    this.perfis?.push({
       usuario: 'Perfil 2',
       src: '../assets/perfil-02.png',
     });
 
-    this.perfis.push({
+    this.perfis?.push({
       usuario: 'Perfil 3',
       src: '../assets/perfil-03.png',
     });
 
-    this.perfis.push({
+    this.perfis?.push({
       usuario: 'Perfil 4',
       src: '../assets/perfil-04.png',
     });

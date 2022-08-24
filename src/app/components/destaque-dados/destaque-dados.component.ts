@@ -15,9 +15,6 @@ export class DestaqueDadosComponent {
   @Input() dstq: string = '';
 
   dstqFav: boolean = false;
-  appComponent: AppComponent;
 
-  constructor() {
-    this.appComponent = new AppComponent();
-  }
+  constructor(private appComponent: AppComponent) {}
 }

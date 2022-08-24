@@ -7,6 +7,7 @@ import { LoginContainerService } from '../login/login.service';
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css'],
+  providers: [LoginContainerService],
 })
 export class HomeComponent implements OnInit, OnDestroy {
   usr: string = '';
@@ -20,12 +21,19 @@ export class HomeComponent implements OnInit, OnDestroy {
     usr: string;
   }[];
 
-  loginContainerService: LoginContainerService;
+  perfil!: {
+    //@@JSC
+    usuario: string;
+    src: string;
+    usr: string;
+  };
 
-  constructor(private route: ActivatedRoute) {
-    this.loginContainerService = new LoginContainerService();
+  constructor(
+    private route: ActivatedRoute,
+    private loginContainerService: LoginContainerService
+  ) {
+    this.usr = this.route.snapshot.params['usr']; //##JSC
     this.perfis = this.loginContainerService.loadPerfis();
-    this.usr = this.route.snapshot.params['usr'];
   }
 
   ngOnInit(): void {
@@ -33,15 +41,10 @@ export class HomeComponent implements OnInit, OnDestroy {
       this.usr = params['usr'];
     });
 
-    console.log(this.perfis.length);
-    for (var i = 0; i < this.perfis.length; i++) {
-      if (this.perfis[i].usr == this.usr) {
-        this.nomPerfil = this.perfis[i].usuario;
-        this.srcPerfil = this.perfis[i].src;
-        console.log('achou');
-      }
-    }
-    console.log(this.usr);
+    this.perfil = this.perfis.filter(p => p.usr === this.usr)[0];
+
+    this.nomPerfil = this.perfil.usuario; //##JSC
+    this.srcPerfil = this.perfil.src; //##JSC
   }
 
   ngOnDestroy() {

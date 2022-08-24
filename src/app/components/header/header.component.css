@@ -78,7 +78,7 @@ header {
    width: 300px;
    margin-left: 20px;
    color: white;
-   background-color: #1D1D1D;
+   background-color: transparent;
 
    transition-property: width;
    transition-duration: 1s;

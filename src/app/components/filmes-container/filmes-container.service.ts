@@ -1,21 +1,18 @@
+import { Midia } from 'src/app/models/models.model';
+
 export class FilmesContainerService {
   loadFilmes(genre: string) {
     if (genre == 'filme-mais-acess') {
       return this.getFilmesMaisAcess();
     } else if (genre == 'serie-mais-acess') {
-      return this.getSeriesMaisAcess();
+      return this.getSeriesMaisAcess(); //##JSC
     } else {
       return [];
     }
   }
 
   getFilmesMaisAcess() {
-    let filmes = [] as {
-      titulo: string;
-      src: string;
-      ano: string;
-      duracao: string;
-    }[];
+    const filmes: Midia[] = [];
 
     filmes.push({
       titulo: 'NIGHTCRAWLER',
