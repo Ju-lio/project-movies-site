@@ -1,13 +1,13 @@
 import { Routes, RouterModule } from '@angular/router';
 import { ModuleWithProviders } from '@angular/core';
 
-import { LoginComponent } from './login/login.component';
-import { HomeComponent } from './home/home.component';
-
+import { LoginComponent } from './modules/login/login.component';
+import { HomeComponent } from './modules/home/home.component';
 
 const APP_ROUTES: Routes = [
-   { path: '', component: LoginComponent },
-   { path: 'home/:usr', component: HomeComponent }
-]
+  { path: '', component: LoginComponent },
+  { path: 'home/:usr', component: HomeComponent },
+];
 
-export const routing: ModuleWithProviders<RouterModule> = RouterModule.forRoot(APP_ROUTES)
+export const routing: ModuleWithProviders<RouterModule> =
+  RouterModule.forRoot(APP_ROUTES);

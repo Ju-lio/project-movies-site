@@ -3,15 +3,19 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './header/header.component';
-import { DestaquesComponent } from './destaques/destaques.component';
-import { DestaqueDadosComponent } from './destaque-dados/destaque-dados.component';
-import { FilmeComponent } from './filme/filme.component';
-import { FilmesContainerComponent } from './filmes-container/filmes-container.component';
-import { FooterComponent } from './footer/footer.component';
-import { LoginComponent } from './login/login.component';
 import { routing } from './app.routing';
-import { HomeComponent } from './home/home.component';
+
+import { HeaderComponent } from './components/header/header.component';
+import { DestaquesComponent } from './components/destaques/destaques.component';
+import { DestaqueDadosComponent } from './components/destaque-dados/destaque-dados.component';
+import { FilmeComponent } from './components/filme/filme.component';
+import { FilmesContainerComponent } from './components/filmes-container/filmes-container.component';
+import { FooterComponent } from './components/footer/footer.component';
+
+import { LoginComponent } from './modules/login/login.component';
+import { HomeComponent } from './modules/home/home.component';
+
+//@@JSC
 
 @NgModule({
   declarations: [
@@ -25,12 +29,8 @@ import { HomeComponent } from './home/home.component';
     LoginComponent,
     HomeComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    routing
-  ],
+  imports: [BrowserModule, AppRoutingModule, routing],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
